@@ -1,4 +1,4 @@
-package me.visola.vocabulary
+package me.visola.vocabulary.views
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
+import me.visola.vocabulary.LanguagesViewModel
 
 @Composable
 fun VocabularyMain(modifier: Modifier) {
