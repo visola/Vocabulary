@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import me.visola.vocabulary.views.WordItem
 
 data class LanguagesState(
     val loading: Boolean = false,
@@ -69,7 +70,7 @@ class LanguagesViewModel : ViewModel() {
 
                 val response = languagesService.getWords(selectedLanguage.value!!)
                 _words.value = _words.value.copy(
-                    words = response.words,
+                    words = response.words.sortedBy { (english) -> english.lowercase() },
                     loading = false,
                 )
             } catch (e: Exception) {

@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import me.visola.vocabulary.ui.theme.VocabularyTheme
 import me.visola.vocabulary.views.VocabularyMain
 
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             VocabularyTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    VocabularyMain(modifier = Modifier.padding(innerPadding))
+                    VocabularyMain(modifier = Modifier.padding(0.dp))
                 }
             }
         }
