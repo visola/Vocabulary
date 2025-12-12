@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import me.visola.vocabulary.views.WordItem
 
 data class LanguagesState(
     val loading: Boolean = false,
@@ -16,6 +15,8 @@ data class LanguagesState(
 data class WordsState(
     val loading: Boolean = false,
     val words: List<Word> = emptyList(),
+    val filteredWords: List<Word> = emptyList(),
+    val searchTerm: String = "",
     val error: String? = null,
 )
 
@@ -32,6 +33,17 @@ class LanguagesViewModel : ViewModel() {
 
     init {
         fetchLanguages()
+    }
+
+    fun searchWords(searchTerm: String) {
+        _words.value = _words.value.copy(
+            searchTerm = searchTerm,
+            filteredWords = _words.value.words.filter {
+                it.english.contains(searchTerm, ignoreCase = true) ||
+                it.original.contains(searchTerm, ignoreCase = true) ||
+                it.pronunciation.contains(searchTerm, ignoreCase = true)
+            }
+        )
     }
 
     private fun fetchLanguages() {
@@ -73,6 +85,7 @@ class LanguagesViewModel : ViewModel() {
                     words = response.words.sortedBy { (english) -> english.lowercase() },
                     loading = false,
                 )
+                searchWords(_words.value.searchTerm)
             } catch (e: Exception) {
                 _words.value = _words.value.copy(
                     error = "Unexpected error loading words: ${e.message}",

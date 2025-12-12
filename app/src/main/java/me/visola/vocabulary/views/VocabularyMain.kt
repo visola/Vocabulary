@@ -36,6 +36,12 @@ fun VocabularyMain(modifier: Modifier) {
             }
         }
 
+        SearchBar(
+            searchTerm = wordsState.searchTerm,
+            onSearchTermChanged = { languageViewModel.searchWords(it) },
+            modifier = modifier,
+        )
+
         when {
             selectedLanguage == null -> Text("No language selected.")
             wordsState.loading -> CircularProgressIndicator(modifier = modifier.align(Alignment.CenterHorizontally))
@@ -44,7 +50,7 @@ fun VocabularyMain(modifier: Modifier) {
                 LazyColumn(
                     modifier = modifier.fillMaxSize(),
                 ) {
-                    items(wordsState.words) { word ->
+                    items(wordsState.filteredWords) { word ->
                         WordItem(word, modifier = modifier)
                     }
                 }
