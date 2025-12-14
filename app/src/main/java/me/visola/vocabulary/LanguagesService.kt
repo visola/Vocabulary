@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 private val retrofit = Retrofit.Builder()
-    .baseUrl("https://raw.githubusercontent.com/visola/languages/refs/heads/main/")
+    .baseUrl("https://raw.githubusercontent.com/visola/Vocabulary/refs/heads/main/languages/")
     .addConverterFactory(GsonConverterFactory.create())
     .build();
 
