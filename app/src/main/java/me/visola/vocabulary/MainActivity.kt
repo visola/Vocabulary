@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             VocabularyTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    VocabularyMain(modifier = Modifier.padding(0.dp))
+                    VocabularyMain(wrapperModifier = Modifier.padding(innerPadding))
                 }
             }
         }

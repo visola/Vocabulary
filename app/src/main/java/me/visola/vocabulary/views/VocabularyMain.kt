@@ -18,13 +18,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import me.visola.vocabulary.LanguagesViewModel
 
 @Composable
-fun VocabularyMain(modifier: Modifier) {
+fun VocabularyMain(wrapperModifier: Modifier) {
     val languageViewModel: LanguagesViewModel = viewModel()
     val languagesState by languageViewModel.languages
     val selectedLanguage by languageViewModel.selectedLanguage
     val wordsState by languageViewModel.words
+    val modifier = Modifier.padding(0.dp)
 
-    Column(modifier = modifier.fillMaxSize()) {
+    Column(modifier = wrapperModifier.fillMaxSize()) {
         Box(modifier = modifier.fillMaxWidth().padding(16.dp, 32.dp, bottom = 0.dp)) {
             when {
                 languagesState.loading -> CircularProgressIndicator(modifier = modifier.align(Alignment.Center))
