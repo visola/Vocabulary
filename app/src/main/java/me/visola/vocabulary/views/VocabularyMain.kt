@@ -15,20 +15,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import me.visola.vocabulary.LanguagesViewModel
 
 @Composable
-fun VocabularyMain(wrapperModifier: Modifier) {
+fun VocabularyMain(navController: NavController, modifier: Modifier = Modifier) {
     val languageViewModel: LanguagesViewModel = viewModel()
     val languagesState by languageViewModel.languages
     val selectedLanguage by languageViewModel.selectedLanguage
     val wordsState by languageViewModel.words
-    val modifier = Modifier.padding(0.dp)
 
-    Column(modifier = wrapperModifier.fillMaxSize()) {
-        Box(modifier = modifier.fillMaxWidth().padding(16.dp, 32.dp, bottom = 0.dp)) {
+    Column(modifier = modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxWidth().padding(16.dp, 32.dp, bottom = 0.dp)) {
             when {
-                languagesState.loading -> CircularProgressIndicator(modifier = modifier.align(Alignment.Center))
+                languagesState.loading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 languagesState.error != null -> Text(text = "An error occurred: ${languagesState.error}")
                 else ->
                     Text(
@@ -40,19 +40,18 @@ fun VocabularyMain(wrapperModifier: Modifier) {
         SearchBar(
             searchTerm = wordsState.searchTerm,
             onSearchTermChanged = { languageViewModel.searchWords(it) },
-            modifier = modifier,
         )
 
         when {
             selectedLanguage == null -> Text("No language selected.")
-            wordsState.loading -> CircularProgressIndicator(modifier = modifier.align(Alignment.CenterHorizontally))
+            wordsState.loading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
             wordsState.error != null -> Text(text = "Error loading words: ${wordsState.error}")
             else -> {
                 LazyColumn(
-                    modifier = modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize(),
                 ) {
                     items(wordsState.filteredWords) { word ->
-                        WordItem(word, modifier = modifier)
+                        WordItem(word, navController = navController)
                     }
                 }
             }

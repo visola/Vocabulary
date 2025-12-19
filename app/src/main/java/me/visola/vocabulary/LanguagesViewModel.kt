@@ -49,6 +49,10 @@ class LanguagesViewModel : ViewModel() {
         )
     }
 
+    fun getWordByOriginal(wordOriginal: String): Word? {
+        return _words.value.words.find { it.original == wordOriginal }
+    }
+
     private fun fetchLanguages() {
         _languages.value = _languages.value.copy(
             loading = true
