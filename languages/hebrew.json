@@ -1,139 +1,347 @@
 {
   "words": [
     {
-      "english": "love",
+      "type": "noun",
       "original": "אהבה",
-      "pronunciation": "ahava"
+      "pronunciation": "ahava",
+      "variations": [
+        {
+          "english": "love",
+          "examples": [{
+            "original": "מצאתי את אהבת חיי.",
+            "english": "I found the love of my life."
+          }]
+        }
+      ]
     },
     {
-      "english": "dad",
+      "type": "noun",
+      "original": "אהובה",
+      "pronunciation": "ahuva",
+      "variations": [
+        {
+          "english": "sweetheart",
+          "examples": [{
+            "original": "לילה טוב אהובה",
+            "english": "Good night, my love."
+          }]
+        }
+      ]
+    },
+    {
+      "type": "noun",
       "original": "אבא",
-      "pronunciation": "aba"
+      "pronunciation": "aba",
+      "variations": [
+        {
+          "english": "dad",
+          "form": "singular",
+          "examples": [{
+            "original": "אני אבא.",
+            "english": "I am a dad."
+          },{
+            "original": "שלום אבא.",
+            "english": "Hello dad."
+          }]
+        }
+      ]
     },
     {
-      "english": "mom",
+      "type": "noun",
       "original": "אמא",
-      "pronunciation": "ima"
+      "pronunciation": "ima",
+      "variations": [
+        {
+          "english": "mom",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "coming",
+      "type": "verb",
       "original": "באה",
-      "pronunciation": "ba ah"
+      "pronunciation": "ba ah",
+      "variations": [
+        {
+          "english": "coming",
+          "tense": "present",
+          "gender": "masculine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "is",
+      "type": "noun",
       "original": "האם",
-      "pronunciation": "ha im"
+      "pronunciation": "ha im",
+      "variations": [
+        {
+          "english": "is",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "he",
+      "type": "noun",
       "original": "הוא",
-      "pronunciation": "hu"
+      "pronunciation": "hu",
+      "variations": [
+        {
+          "english": "he",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "loves",
+      "type": "verb",
       "original": "אוהב",
-      "pronunciation": "ohev"
+      "pronunciation": "ohev",
+      "variations": [
+        {
+          "english": "loves",
+          "tense": "present",
+          "gender": "masculine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "or",
+      "type": "noun",
       "original": "או",
-      "pronunciation": "o"
+      "pronunciation": "o",
+      "variations": [
+        {
+          "english": "or",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "water",
+      "type": "noun",
       "original": "מים",
-      "pronunciation": "mime"
+      "pronunciation": "mime",
+      "variations": [
+        {
+          "english": "water",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "you",
+      "type": "noun",
       "original": "את",
-      "pronunciation": "ata"
+      "pronunciation": "ata",
+      "variations": [
+        {
+          "english": "you",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "she",
+      "type": "noun",
       "original": "היא",
-      "pronunciation": "hii"
+      "pronunciation": "hii",
+      "variations": [
+        {
+          "english": "she",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "like",
+      "type": "verb",
       "original": "אוהבת",
-      "pronunciation": "ohevet"
+      "pronunciation": "ohevet",
+      "variations": [
+        {
+          "english": "like",
+          "tense": "present",
+          "gender": "feminine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "wine",
+      "type": "noun",
       "original": "יין",
-      "pronunciation": "ee ine"
+      "pronunciation": "ee ine",
+      "variations": [
+        {
+          "english": "wine",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "I",
+      "type": "noun",
       "original": "אני",
-      "pronunciation": "anee"
+      "pronunciation": "anee",
+      "variations": [
+        {
+          "english": "I",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "dove",
+      "type": "noun",
       "original": "יונה",
-      "pronunciation": "eonaa"
+      "pronunciation": "eonaa",
+      "variations": [
+        {
+          "english": "dove",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "milk",
+      "type": "noun",
       "original": "חלב",
-      "pronunciation": "halav"
+      "pronunciation": "halav",
+      "variations": [
+        {
+          "english": "milk",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "hot",
+      "type": "adjective",
       "original": "חם",
-      "pronunciation": "ham"
+      "pronunciation": "ham",
+      "variations": [
+        {
+          "english": "hot",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "bread",
+      "type": "noun",
       "original": "לחם",
-      "pronunciation": "lehem"
+      "pronunciation": "lehem",
+      "variations": [
+        {
+          "english": "bread",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "no",
+      "type": "noun",
       "original": "לא",
-      "pronunciation": "lo"
+      "pronunciation": "lo",
+      "variations": [
+        {
+          "english": "no",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "woman",
+      "type": "noun",
       "original": "אישה",
-      "pronunciation": "ishah"
+      "pronunciation": "ishah",
+      "variations": [
+        {
+          "english": "woman",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "happy",
+      "type": "adjective",
       "original": "שמח",
-      "pronunciation": "semearr"
+      "pronunciation": "semearr",
+      "variations": [
+        {
+          "english": "happy",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "boy",
+      "type": "noun",
       "original": "הילד",
-      "pronunciation": "aielet"
+      "pronunciation": "aielet",
+      "variations": [
+        {
+          "english": "boy",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "drinking",
+      "type": "verb",
       "original": "שותה",
-      "pronunciation": "shotah"
+      "pronunciation": "shotah",
+      "variations": [
+        {
+          "english": "drinking",
+          "tense": "present",
+          "gender": "feminine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "eating",
+      "type": "verb",
       "original": "אוכלת",
-      "pronunciation": "orrelet"
+      "pronunciation": "orrelet",
+      "variations": [
+        {
+          "english": "eating",
+          "tense": "present",
+          "gender": "feminine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "see",
+      "type": "verb",
       "original": "רואה",
-      "pronunciation": "roo"
+      "pronunciation": "roo",
+      "variations": [
+        {
+          "english": "see",
+          "tense": "present",
+          "gender": "feminine",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "truck",
+      "type": "noun",
       "original": "משאית",
-      "pronunciation": "massait"
+      "pronunciation": "massait",
+      "variations": [
+        {
+          "english": "truck",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     },
     {
-      "english": "rice",
+      "type": "noun",
       "original": "אורז",
-      "pronunciation": "orrez"
+      "pronunciation": "orrez",
+      "variations": [
+        {
+          "english": "rice",
+          "form": "singular",
+          "examples": []
+        }
+      ]
     }
   ]
 }
