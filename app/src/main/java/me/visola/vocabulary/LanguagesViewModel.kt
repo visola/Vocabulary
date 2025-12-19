@@ -39,9 +39,12 @@ class LanguagesViewModel : ViewModel() {
         _words.value = _words.value.copy(
             searchTerm = searchTerm,
             filteredWords = _words.value.words.filter {
-                it.english.contains(searchTerm, ignoreCase = true) ||
                 it.original.contains(searchTerm, ignoreCase = true) ||
-                it.pronunciation.contains(searchTerm, ignoreCase = true)
+                it.pronunciation.contains(searchTerm, ignoreCase = true) ||
+                it.variations.any { variation ->
+                    variation.english.contains(searchTerm, ignoreCase = true) ||
+                    variation.pronunciation?.contains(searchTerm, ignoreCase = true) == true
+                }
             }
         )
     }
@@ -82,7 +85,7 @@ class LanguagesViewModel : ViewModel() {
 
                 val response = languagesService.getWords(selectedLanguage.value!!)
                 _words.value = _words.value.copy(
-                    words = response.words.sortedBy { (english) -> english.lowercase() },
+                    words = response.words.sortedBy { it.variations.first().english.lowercase() },
                     loading = false,
                 )
                 searchWords(_words.value.searchTerm)
